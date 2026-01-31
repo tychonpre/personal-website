@@ -1,0 +1,59 @@
+/* Reset & base */
+:root{
+  --bg:#f7f7f9;
+  --card:#ffffff;
+  --fg:#111827;
+  --muted:#6b7280;
+  --accent:#2563eb;
+  --max-width:1100px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html,body{height:100%;margin:0}
+img{max-width:100%;height:auto;display:block}
+
+body{
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  line-height:1.5;
+  color:var(--fg);
+  background:var(--bg);
+}
+
+.container{max-width:var(--max-width);margin:0 auto;padding:0 1rem}
+
+/* Header */
+.site-header{background:transparent}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
+.site-title{font-weight:600;color:var(--fg);text-decoration:none}
+.nav-toggle{background:none;border:1px solid transparent;padding:.5rem .75rem;border-radius:4px}
+
+.site-nav ul{list-style:none;padding:0;margin:0;display:flex;gap:1rem}
+.site-nav a{text-decoration:none;color:var(--fg);font-weight:500}
+
+/* Hero */
+.hero{padding:3rem 0;text-align:center}
+.hero-title{font-size:1.75rem;margin:.25rem 0}
+.hero-tag{color:var(--muted);margin:0}
+
+/* Sections */
+section{padding:2rem 0}
+h2{margin:0 0 .75rem}
+p{color:var(--muted)}
+
+/* Projects */
+.project-list{display:flex;flex-direction:column;gap:1rem}
+.project-card{background:var(--card);border:1px solid #e6e7eb;padding:1rem;border-radius:8px;cursor:pointer}
+.project-card h3{margin:.25rem 0}
+.project-card.selected{outline:2px solid var(--accent)}
+
+/* Contact & footer */
+.contact a{color:var(--accent)}
+.site-footer{padding:1.5rem 0;color:var(--muted);text-align:center}
+
+/* Responsive layout */
+@media (min-width:700px){
+  .hero-title{font-size:2.25rem}
+  .project-list{flex-direction:row}
+  .project-card{flex:1}
+  .site-nav ul{gap:1.5rem}
+}
